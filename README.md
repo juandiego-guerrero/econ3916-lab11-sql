@@ -20,4 +20,3 @@ I translated common pandas operations into SQL with DuckDB, checked that both re
 - **Three-valued logic:** `WHERE income != 50000` kept 3 of 5 survey rows, because a comparison with NULL is unknown and `WHERE` keeps only rows where the condition is true. The same filter in pandas kept 5. To match pandas, the SQL needs `OR income IS NULL`.
 - **Remote Parquet:** DuckDB can query a large remote Parquet file directly, reading only the columns it needs instead of the whole file.
 - **AI translation:** After one prompt revision, all three AI queries matched my pandas results on row count (2, 3,612 and 5 rows).
-- 
